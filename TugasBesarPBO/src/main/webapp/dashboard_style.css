@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none; 
+	font-family: 'poppins', sans-serif;
+	color: black;
+}
+
+body{
+	background: #9c9c9b;
+	color: white;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0%;
+    width: 80%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #191970;
+}
+
+.header-text{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.header-text h2{
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+nav>a {
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.logout:hover{
+	color: #ec1d1d;
+}
+
+nav>a:hover{
+    color: #0080ff;
+}
+
+
+
+h2 span{
+	color: #0080ff;
+}
+
+section {
+    background-color: rgb(0, 64, 128);
+    padding: 60px 40px 120px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    margin: 160px auto;
+    color: white;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 200px;
+    padding: 20px;
+}
+
+.profileimage{
+	width: 300px;
+    height: auto;
+    border-radius: 100px;
+    opacity: 0;
+    animation: slideTop 1.5s ease forwards;
+}
+
+.but-home{
+	display: inline-block;
+    padding: 12px 28px;
+    gap: 5px;
+    background: white;
+    border-radius: 40px;
+    margin-top: 25px;
+    font-size: 16px;
+    color: rgb(0, 64, 128);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.but-home:hover{
+	box-shadow: 0 0 8px cyan;
+	padding: 20px;
+	transition: .4s;
+}
+
+main {
+    background-color: rgb(0, 64, 128);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 120px auto 30px;
+}
+
+main h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+main h3{
+	color: rgb(0, 0, 0);
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+main label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: black;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    
+}
+
+main input[type="text"], main textarea, main select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+main input[type="submit"] {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main button[type="submit"]{
+	margin-top: 25px;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+main button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.poll-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+.poll-box h3 {
+    margin-top: 0;
+}
+
+.option {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.poll-card {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
